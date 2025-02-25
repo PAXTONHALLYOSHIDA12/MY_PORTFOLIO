@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spandan K's Portfolio - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Side Popup Styles */
+        .popup {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 320px;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        .popup h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .popup p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .popup button {
+            align-self: flex-end;
+            background: #ff4b2b;
+            color: white;
+            border: none;
+            padding: 7px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .popup button:hover {
+            background: #e33400;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙</button>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="fade-in">
+    <div class="home-container">
+        <h1>Welcome to Spandan K's Portfolio</h1>
+        <p>
+            Hello! I’m Spandan K, a data science and machine learning enthusiast currently pursuing my Bachelor's degree at Symbiosis International University. I am passionate about analyzing complex data sets and deriving meaningful insights that help drive decisions.
+        </p>
+        <p>
+            I have a strong interest in political ideologies, news analysis, and geopolitics. My approach is to use factual statistics and economic analysis to break down myths and propaganda surrounding global events and political narratives. This unique combination of data science and socio-political analysis sets me apart.
+        </p>
+        <p>
+            This portfolio highlights my journey, the projects I've worked on, and how my skills can help organizations achieve their goals. I invite you to explore more about me, my work, and the opportunities we can create together.
+        </p>
+        <a href="about.html" class="btn">Learn More About Me</a>
+    </div>
+</section>
+
+<!-- Side Popup -->
+<div class="popup" id="popup">
+    <h3>🚀 Exciting News!</h3>
+    <p>Our brand-new website, <strong>Cultural Club of Higher Delegation Ministry Affairs</strong>, is launching soon! Stay tuned for updates! 🎉</p>
+    <button onclick="closePopup()">Got It!</button>
+</div>
+
+<footer>
+    <p>&copy; 2025 Spandan K. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+<script src="script.js"></script>
+</body>
+</html>
